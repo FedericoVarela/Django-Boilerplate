@@ -1,0 +1,115 @@
+{% extends './base.html' %}
+
+
+{% block content %}
+{% comment %}
+
+When you start working on your app,
+feel free to delete all the code inside this content block
+
+{% endcomment %}
+<style>
+    body {
+        display: grid;
+        max-width: 100vw;
+        margin: 0px 100px;
+        font-family: Arial, Helvetica, sans-serif;
+        color: #333333;
+        grid-template-columns: 1fr 1fr;
+        grid-template-rows: 0.55fr 0.75fr 0.85fr 0.55fr;
+        grid-template-areas:
+            "header           header"
+            "toolbar         jupyter"
+            "batch      requirements"
+            "migrations  suggestions";
+    }
+
+    div {
+        grid-area: header;
+        padding-bottom: 0px;
+        margin-left: 20px;
+
+    }
+
+    section {
+        max-width: 40vw;
+        border-radius: 8px;
+        background-color: #eeeeee;
+        width: 60vw;
+        padding: 10px;
+        line-height: 1.7rem;
+        margin: 10px;
+
+    }
+    small{
+        float: right;
+        font-size: 16px;
+    }
+
+    section h3 {
+        padding: 5px;
+    }
+    code{
+        border-radius: 10px;
+        background-color: #111111;
+        color: #eeeeee;
+        padding: 2px 6px;
+    }
+</style>
+
+<div>
+    <h1>
+        Hi! This is A Django boilerplate by 
+        <a href="https://github.com/FedericoVarela">Federico Varela</a>
+        <small>You should see the toolbar here --></small>
+    </h1>
+    <hr>
+    <h2>Features:</h2>
+</div>
+
+
+
+<section style="grid-area: toolbar; float: right;">
+    <h3>Django Debug Toolbar</h3>
+    <p>
+        Django Debug Toolbar allows the developer to see the data associated with the request, 
+        such as SQL queries
+        executed, request headers, cache, static files and more
+    </p>
+</section>
+
+<section style="grid-area: jupyter;">
+    <h3>Jupyter Notebooks</h3>
+    <p>
+        Jupyter Notebooks for debugging and tinkering with the ORM, just as the regular shell, 
+        but more comfortable and
+        saves checkpoints of your document
+    </p>
+</section>
+<section style="grid-area: batch">
+    <h3>Batch Files</h3>
+    <p>
+        The regular Django commands are abstracted behind batch files, allowing you to run them with a single word
+       <br> <em>You can also add <code>call path/to/env</code> after <code>@ECHO OFF</code> to activate your environment before running the command</em>
+    </p>
+</section>
+<section style="grid-area: requirements">
+    <h3>Requirements</h3>
+    <p>
+        Project's requirements.txt file is included with all the dependencies ready
+    </p>
+</section>
+<section style="grid-area: migrations;">
+    <h3>Migrations already ran</h3>
+    <p>
+        The SQLite database has the initial migrations already set up
+    </p>
+</section>
+<section style="grid-area: suggestions;">
+    <h3>Suggestions</h3>
+    <p>
+        Have I missed some functionality? Would you like to have something else included? Send me a pull request and I'll check it out
+    </p>
+</section>
+
+{% endblock content %}

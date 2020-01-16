@@ -1,5 +1,5 @@
 @ECHO OFF
-call conda activate
+::call path/to/env
 
 ::Tests all apps at once. 
 python manage.py test 

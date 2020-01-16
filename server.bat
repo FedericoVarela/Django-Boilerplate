@@ -1,4 +1,4 @@
 @ECHO OFF
-call conda activate
+::call path/to/env
 
 python manage.py runserver
