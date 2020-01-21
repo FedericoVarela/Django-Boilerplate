@@ -13,8 +13,8 @@
  - Greeting view, like create-react-app
 
  ```bash
-  git clone "path/to/git"
-  npx degit path/to/git
+  git clone https://github.com/FedericoVarela/Django-Boilerplate
+  npx degit /FedericoVarela/Django-Boilerplate/
  ```
 
 Have I missed some functionality? Would you like to have something else included? Send me a pull request and I'll check it out
