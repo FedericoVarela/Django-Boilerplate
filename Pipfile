@@ -1,0 +1,28 @@
+[[source]]
+name = "pypi"
+url = "https://pypi.org/simple"
+verify_ssl = true
+
+[dev-packages]
+django-debug-toolbar = "==2.1"
+django-extensions = "*"
+jupyter = "*"
+ipython = "*"
+ipykernel = "*"
+
+[packages]
+pytz = "==2019.3"
+django = "*"
+python-decouple = "*"
+pytest = "*"
+pytest-django = "*"
+
+[requires]
+python_version = "3.8"
+
+[scripts]
+dev = "python manage.py runserver --settings={{ project_name }}.settings.development"
+makemigrations = "python manage.py makemigrations"
+migrate = "python manage.py migrate"
+notebook = "python manage.py shell_plus --notebook --no-browser --settings={{ project_name }}.settings.development"
+test = "py.test tests --ds={{ project_name }}.settings.development "
