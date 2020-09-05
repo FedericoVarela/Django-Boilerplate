@@ -13,8 +13,11 @@
  - Greeting view, like create-react-app
 
  ```bash
-  git clone https://github.com/FedericoVarela/Django-Boilerplate
-  npx degit /FedericoVarela/Django-Boilerplate/
- ```
+mkdir repo_root && cd repo_root
+pipenv install django
+  django-admin.py startproject --template=https://github.com/FedericoVar la/Django-Boilerplate/archive/master.zip --extension py,.env,Pipfile bobeando
+ela/Django-Boilerplate/archive/master.zip --extension py,.env,Pipfile <project_name>
+#Then delete the Pipfile created by the first pipenv install 
+```
 
 Have I missed some functionality? Would you like to have something else included? Send me a pull request and I'll check it out
