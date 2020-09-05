@@ -15,8 +15,8 @@
  ```bash
 mkdir repo_root && cd repo_root
 pipenv install django
-  django-admin.py startproject --template=https://github.com/FedericoVar la/Django-Boilerplate/archive/master.zip --extension py,.env,Pipfile bobeando
-ela/Django-Boilerplate/archive/master.zip --extension py,.env,Pipfile <project_name>
+  django-admin.py startproject --template=https://github.com/FedericoVarela/Django-Boilerplate/archive/master.zip --extension py,.env 
+  --name Pipfile <project_name>
 #Then delete the Pipfile created by the first pipenv install 
 ```
 
