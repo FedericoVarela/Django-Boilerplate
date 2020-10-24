@@ -26,11 +26,9 @@ INSTALLED_APPS = [
     'django.contrib.sessions',
     'django.contrib.messages',
     'django.contrib.staticfiles',
-    'django_extensions',
 ]
 
 MIDDLEWARE = [
-    'debug_toolbar.middleware.DebugToolbarMiddleware',
     'django.middleware.security.SecurityMiddleware',
     'django.contrib.sessions.middleware.SessionMiddleware',
     'django.middleware.common.CommonMiddleware',
@@ -115,18 +113,10 @@ STATIC_URL = '/static/'
 # STATICFILES_DIRS = [
 #     # os.path.join(BASE_DIR, "<app_name>/static").replace("\\", "/"),
 #     ]
-# STATIC_ROOT = os.path.join(BASE_DIR, 'static')
+
+STATIC_ROOT = os.path.join(BASE_DIR, 'static')
 
 MEDIA_URL = '/media/'
 MEDIA_ROOT = os.path.join(BASE_DIR, 'media')
-
-LOGGING = {
-    'version': 1,
-    'loggers': {
-        '{{ project_name }}': {
-            'level': "DEBUG"
-        }
-    }
-}
 
 #Sample use: https://docs.djangoproject.com/en/2.0/topics/logging/#topic-logging-parts-loggers

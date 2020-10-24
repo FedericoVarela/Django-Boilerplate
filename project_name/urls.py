@@ -1,9 +1,8 @@
 from django.contrib import admin
 from django.urls import path, include
-from decouple import config
 from django.views.generic import TemplateView
+from django.conf.global_settings import DEBUG
 
-DEBUG = config("DEBUG")
 
 urlpatterns = [
     path('admin/', admin.site.urls),

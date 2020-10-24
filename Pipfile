@@ -9,13 +9,14 @@ django-extensions = "*"
 jupyter = "*"
 ipython = "*"
 ipykernel = "*"
+pytest = "*"
+pytest-django = "*"
+
 
 [packages]
 pytz = "==2019.3"
 django = "*"
 python-decouple = "*"
-pytest = "*"
-pytest-django = "*"
 
 [requires]
 python_version = "3.8"
@@ -23,10 +24,10 @@ python_version = "3.8"
 [scripts]
 dev = "python manage.py runserver --settings={{ project_name }}.settings.development"
 serve = "python manage.py runserver --settings={{ project_name }}.settings.production"
-check = "python manage.py check --deploy"
+check = "python manage.py check --deploy --settings={{ project_name }}.settings.production"
 
-makemigrations = "python manage.py makemigrations"
-migrate = "python manage.py migrate"
+makemigrations = "python manage.py makemigrations --settings={{ project_name }}.settings.development"
+migrate = "python manage.py migrate --settings={{ project_name }}.settings.development"
 
 notebook = "python manage.py shell_plus --notebook --no-browser --settings={{ project_name }}.settings.development"
 test = "py.test tests --ds={{ project_name }}.settings.development "
