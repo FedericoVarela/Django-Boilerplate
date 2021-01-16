@@ -1,4 +1,3 @@
-from django.conf.global_settings import CSRF_COOKIE_SECURE
 from .base import *
 
 DEBUG = False
@@ -10,7 +9,7 @@ ALLOWED_HOSTS = []
 LOGGING = {
     'version': 1,
     'loggers': {
-        '{{ project_name }}': {
+        'project_name': {
             'level': "INFO"
         }
     }

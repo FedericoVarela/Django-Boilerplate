@@ -1,6 +1,7 @@
 __pycache__
 db.sqlite3
 .pytest_cache
+.vscode
 
 #TODO: Remove .env from the repo before publising
 # .env
