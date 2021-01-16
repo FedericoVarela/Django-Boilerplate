@@ -4,7 +4,7 @@ url = "https://pypi.org/simple"
 verify_ssl = true
 
 [dev-packages]
-django-debug-toolbar = "==2.1"
+django-debug-toolbar = "==3.2"
 django-extensions = "*"
 jupyter = "*"
 ipython = "*"
@@ -22,7 +22,7 @@ python-decouple = "*"
 python_version = "3.8"
 
 [scripts]
-dev = "python manage.py runserver --settings={{ project_name }}.settings.development"
+dev = "python manage.py runserver"
 serve = "python manage.py runserver --settings={{ project_name }}.settings.production"
 check = "python manage.py check --deploy --settings={{ project_name }}.settings.production"
 

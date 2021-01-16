@@ -3,8 +3,7 @@ from pathlib import Path
 
 from decouple import config
 
-BASE_DIR = Path(__file__).resolve().parents[2]
-
+BASE_DIR = Path(__file__).resolve().parent.parent.parent
 
 # Quick-start development settings - unsuitable for production
 # See https://docs.djangoproject.com/en/3.0/howto/deployment/checklist/
@@ -43,7 +42,7 @@ ROOT_URLCONF = '{{ project_name }}.urls'
 TEMPLATES = [
     {
         'BACKEND': 'django.template.backends.django.DjangoTemplates',
-        'DIRS': [os.path.join(BASE_DIR, "templates")],
+        'DIRS': [BASE_DIR / "templates"],
         'APP_DIRS': True,
         'OPTIONS': {
             'context_processors': [
@@ -56,6 +55,7 @@ TEMPLATES = [
     },
 ]
 
+
 WSGI_APPLICATION = '{{ project_name }}.wsgi.application'
 
 
@@ -65,7 +65,7 @@ WSGI_APPLICATION = '{{ project_name }}.wsgi.application'
 DATABASES = {
     'default': {
         'ENGINE': 'django.db.backends.sqlite3',
-        'NAME': os.path.join(BASE_DIR, 'db.sqlite3'),
+        'NAME': BASE_DIR / 'db.sqlite3',
     }
 }
 
@@ -110,9 +110,9 @@ STATIC_URL = '/static/'
 
 # Use this guidelines to add static dirs for each app
 
-# STATICFILES_DIRS = [
-#     # os.path.join(BASE_DIR, "<app_name>/static").replace("\\", "/"),
-#     ]
+STATICFILES_DIRS = [
+    # os.path.join(BASE_DIR, "<app_name>/static").replace("\\", "/"),
+]
 
 STATIC_ROOT = os.path.join(BASE_DIR, 'static')
 
