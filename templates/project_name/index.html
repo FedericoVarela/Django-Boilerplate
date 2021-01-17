@@ -20,8 +20,8 @@ feel free to delete all the code inside this content block
         grid-template-areas:
             "header           header"
             "toolbar         jupyter"
-            "batch      requirements"
-            "migrations  suggestions";
+            "tasks      dependencies"
+            "suggestions  .";
     }
 
     div {
@@ -41,7 +41,8 @@ feel free to delete all the code inside this content block
         margin: 10px;
 
     }
-    small{
+
+    small {
         float: right;
         font-size: 16px;
     }
@@ -49,7 +50,8 @@ feel free to delete all the code inside this content block
     section h3 {
         padding: 5px;
     }
-    code{
+
+    code {
         border-radius: 10px;
         background-color: #111111;
         color: #eeeeee;
@@ -59,7 +61,7 @@ feel free to delete all the code inside this content block
 
 <div>
     <h1>
-        Hi! This is A Django boilerplate by 
+        Hi! This is A Django boilerplate by
         <a href="https://github.com/FedericoVarela">Federico Varela</a>
         <small>You should see the toolbar here --></small>
     </h1>
@@ -72,7 +74,7 @@ feel free to delete all the code inside this content block
 <section style="grid-area: toolbar; float: right;">
     <h3>Django Debug Toolbar</h3>
     <p>
-        Django Debug Toolbar allows the developer to see the data associated with the request, 
+        Django Debug Toolbar allows the developer to see the data associated with the request,
         such as SQL queries
         executed, request headers, cache, static files and more
     </p>
@@ -81,34 +83,30 @@ feel free to delete all the code inside this content block
 <section style="grid-area: jupyter;">
     <h3>Jupyter Notebooks</h3>
     <p>
-        Jupyter Notebooks for debugging and tinkering with the ORM, just as the regular shell, 
+        Jupyter Notebooks for debugging and tinkering with the ORM, just as the regular shell,
         but more comfortable and
         saves checkpoints of your document
     </p>
 </section>
-<section style="grid-area: batch">
-    <h3>Batch Files</h3>
+<section style="grid-area: tasks">
+    <h3>Pipenv Tasks</h3>
     <p>
-        The regular Django commands are abstracted behind batch files, allowing you to run them with a single word
-       <br> <em>You can also add <code>call path/to/env</code> after <code>@ECHO OFF</code> to activate your environment before running the command</em>
+        You can run any normal Django command writing <code>pipenv run &lt;command &gt;</code> 
+        using the pre-written commands in Pipfile,
+        or you can run them as VSCode tasks using my <a href="https://marketplace.visualstudio.com/items?itemName=FedericoVarela.pipenv-scripts">extension</a>
     </p>
 </section>
-<section style="grid-area: requirements">
+<section style="grid-area: dependencies">
     <h3>Requirements</h3>
     <p>
-        Project's requirements.txt file is included with all the dependencies ready
-    </p>
-</section>
-<section style="grid-area: migrations;">
-    <h3>Migrations already ran</h3>
-    <p>
-        The SQLite database has the initial migrations already set up
+        Project's Pipfile is included with all the dependencies ready
     </p>
 </section>
 <section style="grid-area: suggestions;">
     <h3>Suggestions</h3>
     <p>
-        Have I missed some functionality? Would you like to have something else included? Send me a pull request and I'll check it out
+        Have I missed some functionality? Would you like to have something else included? Send me a pull request and
+        I'll check it out
     </p>
 </section>
 

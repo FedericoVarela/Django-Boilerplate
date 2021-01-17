@@ -11,7 +11,7 @@ ipython = "*"
 ipykernel = "*"
 pytest = "*"
 pytest-django = "*"
-
+autopep8 = "*"
 
 [packages]
 pytz = "==2019.3"
@@ -25,9 +25,7 @@ python_version = "3.8"
 dev = "python manage.py runserver"
 serve = "python manage.py runserver --settings={{ project_name }}.settings.production"
 check = "python manage.py check --deploy --settings={{ project_name }}.settings.production"
-
 makemigrations = "python manage.py makemigrations --settings={{ project_name }}.settings.development"
 migrate = "python manage.py migrate --settings={{ project_name }}.settings.development"
-
 notebook = "python manage.py shell_plus --notebook --no-browser --settings={{ project_name }}.settings.development"
-test = "py.test tests --ds={{ project_name }}.settings.development "
+test = "py.test tests "

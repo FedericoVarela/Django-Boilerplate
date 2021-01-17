@@ -12,7 +12,7 @@
 
  # You'll probably need a global Django installation for the django-admin
 
-django-admin startproject --template=https://github.com/FedericoVarela/Django-Boilerplate/archive/master.zip --extension py,.env,yml,ini --name Pipfile <project_name>
+django-admin startproject --template=https://github.com/FedericoVarela/Django-Boilerplate/archive/master.zip --extension py,.env,yml,ini,ipynb --name Pipfile <project_name>
 ```
 
 Have I missed some functionality? Would you like to have something else included? Send me a pull request and I'll check it out

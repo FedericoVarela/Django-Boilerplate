@@ -119,4 +119,4 @@ STATIC_ROOT = os.path.join(BASE_DIR, 'static')
 MEDIA_URL = '/media/'
 MEDIA_ROOT = os.path.join(BASE_DIR, 'media')
 
-#Sample use: https://docs.djangoproject.com/en/2.0/topics/logging/#topic-logging-parts-loggers
+# Sample use: https://docs.djangoproject.com/en/2.0/topics/logging/#topic-logging-parts-loggers
